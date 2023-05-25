@@ -1,0 +1,17 @@
+Footer{
+    background-color: black;
+    color: tan;
+}
+
+.container{
+    text-align: center;
+}
+
+.col{
+    padding: 0;
+}
+
+iframe{
+    width: 300px;
+    height: 200px;
+}

@@ -1,0 +1,29 @@
+.cards{
+    margin: 0px 0 20px 0;
+}
+
+.CardBody{
+    text-align: center;
+}
+
+.buttonVerProducto{
+    background-color: black;
+    border: none;
+}
+
+a:link{
+    text-decoration: none;
+    background-color: black;
+}
+
+
+a,a:hover{
+    color: tan;
+}
+
+
+.buttonVerProducto:hover{
+    background-color: black;
+    opacity: 0.5;
+}
+

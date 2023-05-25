@@ -1,0 +1,86 @@
+.navBar{
+    padding: 2px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid black;
+    align-items: center;
+    background-color: black;
+    opacity: 0.9;
+    margin-bottom: 112px;
+}
+
+
+.navUlUno{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.navUlUno li{
+    font-weight: bold;
+    font-size: 18px;
+    list-style-type: none;
+    color: tan;
+}
+
+.dropBtn{
+    background-color: black !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dropMenu{
+    background-color: black;
+}
+
+.dropItem{
+    color: tan;
+}
+
+.dropItem:hover{
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+}
+
+.navUlUno li:hover{
+    opacity: 0.5;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.navUlDos{
+    display: flex;
+    width: 50%;
+    justify-content:flex-end;
+    margin: 0;
+}
+
+.navUlDos li{
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 18px;
+    margin-right: 20px;
+    color: tan;
+
+}
+
+.navUlDos li:hover{
+    opacity: 0.5;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.navUlDos li img{
+    background-color: tan;
+    border-radius: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+a:link{
+    text-decoration: none;
+}

@@ -1,0 +1,22 @@
+import Items from "../Items/Items";
+
+const ItemList = ({ listaProductos }) => {
+  return (
+    <main className="Main">
+      {listaProductos.map((producto) => {
+        return (
+          <Items
+            productId={producto.productId}
+            imgUrl={producto.imgUrl}
+            stock={producto.stok}
+            description={producto.description}
+            price={producto.price}
+            articulo={producto.articulo}
+          />
+        );
+      })}
+    </main>
+  );
+};
+
+export default ItemList;
