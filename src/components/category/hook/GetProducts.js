@@ -8,7 +8,7 @@ export const GetProducts = () =>{
         getCollection("productos").then((result) => {
           setProductos(result);
         });
-      }, [])
+      },[])
 
       return{productos}
 } 

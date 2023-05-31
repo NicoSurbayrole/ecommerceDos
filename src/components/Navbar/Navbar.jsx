@@ -5,16 +5,22 @@ import {
   DropdownMenu,
   DropdownToggle,
 } from "reactstrap";
+import { GetCategory } from "./hook/GetCatgory";
 import "./Navbar.css";
-import { useState } from "react";
+import { useState} from "react";
 import { Link } from "react-router-dom";
 
+
+
 const Navbar = () => {
+  const {categoria} = GetCategory();
   const [dropdown, setDropDown] = useState(false);
   const [drop, setDrop] = useState(false);
   const abrirCerrarDropdown = () => setDropDown(!dropdown);
   const abrirCerrarDrop = () => setDrop(!drop);
 
+
+  
   return (
     <nav className="navBar">
       <ul className="navUlUno">
@@ -29,9 +35,7 @@ const Navbar = () => {
             <li>CATEGORIAS</li>
           </DropdownToggle>
           <DropdownMenu className="dropMenu">
-            <DropdownItem className="dropItem">REMERAS</DropdownItem>
-            <DropdownItem className="dropItem">PANTALONES</DropdownItem>
-            <DropdownItem className="dropItem">ZAPATILLS</DropdownItem>
+            {categoria.map(({categoria,id}) => <Link to={`/category/${id}`}><DropdownItem className="dropItem" key={id}>{categoria.toUpperCase()}</DropdownItem></Link>)}
           </DropdownMenu>
         </Dropdown>
         <li>CONTACTO</li>

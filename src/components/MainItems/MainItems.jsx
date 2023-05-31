@@ -4,7 +4,7 @@ import Spinner from "react-bootstrap/Spinner";
 
 const MainItems = () =>{
     const {productos} = GetProducts()
-
+    
     return productos.length > 0 ? (
         <ItemList listaProductos={productos} />
       ) : (

@@ -5,10 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
-import Products from "./components/Products/Products";
 import MainItems from "./components/MainItems/MainItems";
 import Footer from "./components/Footer/Footer";
 import SingleProduct from "./components/SinglePorduct/SingleProduct";
+import Category from "./components/category/Category";
 
 function App() {
   return (
@@ -18,14 +18,12 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<MainItems />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<MainItems />} />
         <Route path="/registro" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/item/:id" element={<SingleProduct/>}/>
+        <Route path="/category/:categoryId" element={<Category/>}/>
       </Routes>
-      <footer>
-        <Footer />
-      </footer>
     </BrowserRouter>
   );
 }
