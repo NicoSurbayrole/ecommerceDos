@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import{getCollection} from '../../../utils/getFirestore'
+import{getCollection} from './getFirestore'
 
 export const GetCategory = () =>{
     const [categoria, setCategoria] = useState([]);

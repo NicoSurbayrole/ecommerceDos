@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { GetProducts } from "./hook/GetProducts";
+import { GetProducts } from "../../utils/GetProducts";
 import "./category.css";
 
 const Category = () => {
   const { categoryId } = useParams();
   const [params, setParams] = useState(categoryId);
-  
+
   const { productos } = GetProducts();
 
   useEffect(() => {
@@ -19,17 +19,19 @@ const Category = () => {
 
   return (
     <main className="container">
-      {singleProduct.map(({productId, articulo, description, imgUrl, price }) => {
-        return (
-          <div key={productId} className="Div">
-            <img className="Img" alt={articulo} src={imgUrl}></img>
-            <h2 className="articulo">{articulo.toUpperCase()}</h2>
-            <p className="description">{description.toUpperCase()}</p>
-            <p>price: {price}$</p>
-            <button className="BTN">AGREGAR AL CARRITO</button>
-          </div>
-        );
-      })}
+      {singleProduct.map(
+        ({ productId, articulo, description, imgUrl, price }) => {
+          return (
+            <div key={productId} className="Div">
+              <img className="Img" alt={articulo} src={imgUrl}></img>
+              <h2 className="articulo">{articulo.toUpperCase()}</h2>
+              <p className="description">{description.toUpperCase()}</p>
+              <p>price: {price}$</p>
+              <button className="BTN">AGREGAR AL CARRITO</button>
+            </div>
+          );
+        }
+      )}
     </main>
   );
 };

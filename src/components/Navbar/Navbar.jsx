@@ -5,7 +5,7 @@ import {
   DropdownMenu,
   DropdownToggle,
 } from "reactstrap";
-import { GetCategory } from "./hook/GetCatgory";
+import { GetCategory } from "../../utils/GetCatetgory";
 import { useState} from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";

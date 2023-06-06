@@ -1,4 +1,4 @@
-import { GetProducts } from "./hook/GetProducts"
+import { GetProducts } from "../../utils/GetProducts"
 import ItemList from "../ItemList/ItemList";
 import Spinner from "react-bootstrap/Spinner";
 

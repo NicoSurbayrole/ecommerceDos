@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import{getCollection} from '../../../utils/getFirestore'
+import{getCollection} from './getFirestore'
 
 export const GetProducts = () =>{
   const [productos, setProductos] = useState([]);
@@ -8,7 +8,7 @@ export const GetProducts = () =>{
         getCollection("productos").then((result) => {
           setProductos(result);
         });
-      },[])
+      }, [])
 
       return{productos}
 } 
