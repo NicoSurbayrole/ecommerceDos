@@ -35,7 +35,7 @@ const Navbar = () => {
             <li>CATEGORIAS</li>
           </DropdownToggle>
           <DropdownMenu className="dropMenu">
-            {categoria.map(({categoria,id}) => <Link to={`/category/${id}`}><DropdownItem className="dropItem" key={id}>{categoria.toUpperCase()}</DropdownItem></Link>)}
+            {categoria.map(({categoria,id}) => <Link key={id} to={`/category/${id}`}><DropdownItem className="dropItem" key={id}>{categoria.toUpperCase()}</DropdownItem></Link>)}
           </DropdownMenu>
         </Dropdown>
         <li>CONTACTO</li>

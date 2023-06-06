@@ -57,3 +57,8 @@ margin-bottom: 20px;
     color: #ffdaa6;
     text-decoration: underline;
 }
+
+.error{
+    color: white;
+    margin: 0;
+}

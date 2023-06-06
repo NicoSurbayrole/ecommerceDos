@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 import { initializeApp } from "firebase/app";
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { UserContextProvider } from "./context/UserContext";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAROMdMnNffLl9KcPIAtxQRv_1UF8nHo_E",
@@ -12,16 +13,17 @@ const firebaseConfig = {
   storageBucket: "fullsniker-62272.appspot.com",
   messagingSenderId: "872129765134",
   appId: "1:872129765134:web:86325fc6f135e54004c15f",
-  measurementId: "G-BZLEXV1DVF"
+  measurementId: "G-BZLEXV1DVF",
 };
 
 initializeApp(firebaseConfig);
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <UserContextProvider>
+      <App />
+    </UserContextProvider>
   </React.StrictMode>
 );
 
