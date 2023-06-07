@@ -16,11 +16,11 @@ margin-bottom: 20px;
 
 .controls{
     width: 100%;
-    background: #ffdaa6;
+    background: #a87d53;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #ffdaa6;
+    border: 1px solid #a87d53;
     font-size: 18px;
 }
 
@@ -43,7 +43,7 @@ margin-bottom: 20px;
 
 .botons{
     width: 100%;
-    background-color: #ffdaa6;
+    background-color: #a87d53;
     border:none;
     padding: 12px;
     color: black;
@@ -53,8 +53,8 @@ margin-bottom: 20px;
 }
 
 .botons:hover{
-    background-color:black;
-    color: #ffdaa6;
+    background-color:#1a0c12;
+    color: #a87d53;
     text-decoration: underline;
 }
 

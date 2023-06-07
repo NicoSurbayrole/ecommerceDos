@@ -1,0 +1,38 @@
+.adminContainer{
+    width: 400px;
+    background: #a87d53;
+    padding: 30px;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    text-align: center;
+}
+
+.admin-titel{
+    color: #0a0700;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-decoration: underline 2px;
+    opacity: 0.8;
+}
+
+.btn-admin{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #0a0700;
+    opacity: 0.8;
+    color: #a87d53;
+    border: none;
+}
+
+.btn-admin:hover{
+    background-color: #a87d53;
+    color: #0a0700;
+    font-weight: bolder;
+    text-decoration: underline;
+}

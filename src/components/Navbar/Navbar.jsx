@@ -61,7 +61,7 @@ const Navbar = () => {
           </DropdownMenu>
         </Dropdown>
         <li>CONTACTO</li>
-        {usuario.role === "admin" ? <li>ADMIN</li> : <></>}
+        {usuario.role === "admin" ?<Link to={'/admin'}><li>ADMIN</li></Link> : <></>}
       </ul>
       <ul className="navUlDos">
         <li>
@@ -95,9 +95,9 @@ const Navbar = () => {
               <DropdownItem onClick={handeLogOut} className="dropItem">
                 CERRAR SESION
               </DropdownItem>
-              <DropdownItem onClick={handeLogOut} className="dropItem">
-                PANEL ADMIN
-              </DropdownItem>
+              <Link to={'/admin'}>
+                <DropdownItem className="dropItem">PANEL ADMIN</DropdownItem>
+              </Link>
             </DropdownMenu>
           ) : (
             <DropdownMenu className="dropMenu">

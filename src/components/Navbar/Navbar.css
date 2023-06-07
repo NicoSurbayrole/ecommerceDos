@@ -21,7 +21,7 @@
     font-weight: bold;
     font-size: 18px;
     list-style-type: none;
-    color: tan;
+    color: #a87d53;
     margin-right: 20px;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .dropItem{
-    color: tan;
+    color: #a87d53;
 }
 
 .dropItem:hover{
@@ -65,7 +65,7 @@
     list-style-type: none;
     font-size: 18px;
     margin-right: 20px;
-    color: tan;
+    color: #a87d53;
 
 }
 
@@ -76,7 +76,7 @@
 }
 
 .navUlDos li img{
-    background-color: tan;
+    background-color: #a87d53;
     border-radius: 15px;
     width: 35px;
     height: 35px;
@@ -87,7 +87,7 @@ a:link{
 }
 
 .userName{
-    color: tan;
+    color: #a87d53;
     margin: 0;
     font-size: 12px;
 }

@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import MainItems from "./components/MainItems/MainItems";
 import SingleProduct from "./components/SinglePorduct/SingleProduct";
 import Category from "./components/category/Category";
+import Admin from "./components/Admin/Admin";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/products" element={<MainItems />} />
         <Route path="/registro" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin/>}/>
         <Route path="/item/:productId" element={<SingleProduct/>}/>
         <Route path="/category/:categoryId" element={<Category/>}/>
       </Routes>
