@@ -85,3 +85,9 @@
 a:link{
     text-decoration: none;
 }
+
+.userName{
+    color: tan;
+    margin: 0;
+    font-size: 12px;
+}

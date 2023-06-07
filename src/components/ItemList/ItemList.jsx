@@ -6,6 +6,7 @@ const ItemList = ({ listaProductos }) => {
       {listaProductos.map((producto) => {
         return (
           <Items
+            key={producto.productId}
             productId={producto.productId}
             imgUrl={producto.imgUrl}
             stock={producto.stok}

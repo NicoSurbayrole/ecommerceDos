@@ -1,19 +1,64 @@
 import "./Register.css";
-import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
-
+import { CreatUser } from "../../utils/CreatUser";
+import { GetUsers } from "../../utils/GetUsers";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const { user } = GetUsers();
 
-    
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (users) => {
+    let usuario;
+
+    const userValidat = user.find(({ email }) => email === users.email);
+
+    if (userValidat) {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "email ya registrado",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      if (user.length === 0) {
+        usuario = users;
+       usuario = {...usuario, role:"admin"} 
+        CreatUser(usuario).then(() =>
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "usuario creado correctamente",
+            showConfirmButton: false,
+            timer: 1500,
+          })
+        );
+        navigate("/login");
+      } else {
+        usuario = users;
+        usuario = {...usuario, role:"user"}
+        CreatUser(usuario).then(() =>
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "usuario creado correctamente",
+            showConfirmButton: false,
+            timer: 1500,
+          })
+        );
+        navigate("/login");
+      }
+    }
+  };
 
   return (
     <main className="registerMani">
@@ -40,16 +85,16 @@ const Register = () => {
           <input
             className="controls"
             type="text"
-            name="apellido"
+            name="lastName"
             placeholder="Ingresa tu apellido"
-            {...register("apellido", {
+            {...register("lastName", {
               required: true,
               pattern: { value: /^([a-zA-Z]+)(\s[a-zA-Z]+)*$/ },
             })}
           />
           <ErrorMessage
             errors={errors}
-            name="apellido"
+            name="lastName"
             render={() => <p>El apellido es requerido</p>}
           />
           <input
@@ -77,9 +122,9 @@ const Register = () => {
           <ErrorMessage
             errors={errors}
             name="password"
-            render={() => <p>La contraseña debe tener minimo  caracteres</p>}
+            render={() => <p>La contraseña debe tener minimo caracteres</p>}
           />
-          <input className="botons" type="submit" value="REGISTRARSE"></input>
+          <input className="botons" type="submit" value="REGISTRARSE" />
           <p>
             ¿Ya Tengo Cuenta?
             <Link className="link" to={"/login"}>

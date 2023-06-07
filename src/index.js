@@ -1,7 +1,10 @@
-import React from "react";
+
 import { initializeApp } from "firebase/app";
+import { Provider } from "react-redux";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import store from "./state/store";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -20,7 +23,9 @@ initializeApp(firebaseConfig);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
       <App />
+    </Provider>
   </React.StrictMode>
 );
 
