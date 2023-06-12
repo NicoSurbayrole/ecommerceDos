@@ -9,6 +9,7 @@ import MainItems from "./components/MainItems/MainItems";
 import SingleProduct from "./components/SinglePorduct/SingleProduct";
 import Category from "./components/category/Category";
 import Admin from "./components/Admin/Admin";
+import Carrito from "./components/Carrito/Carrito";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<MainItems />} />
+        <Route path="/carrito" element={<Carrito/>}/>
         <Route path="/products" element={<MainItems />} />
         <Route path="/registro" element={<Register />} />
         <Route path="/login" element={<Login />} />

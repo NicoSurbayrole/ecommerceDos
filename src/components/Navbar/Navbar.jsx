@@ -61,14 +61,22 @@ const Navbar = () => {
           </DropdownMenu>
         </Dropdown>
         <li>CONTACTO</li>
-        {usuario.role === "admin" ?<Link to={'/admin'}><li>ADMIN</li></Link> : <></>}
+        {usuario.role === "admin" ? (
+          <Link to={"/admin"}>
+            <li>ADMIN</li>
+          </Link>
+        ) : (
+          <></>
+        )}
       </ul>
       <ul className="navUlDos">
         <li>
-          <img
-            src="https://cdn.discordapp.com/attachments/743564275783696539/1111089192945066024/icons8-agregar-a-carrito-de-compras-30.png"
-            alt="carrito"
-          ></img>
+          <Link to={"/carrito"}>
+            <img
+              src="https://cdn.discordapp.com/attachments/743564275783696539/1111089192945066024/icons8-agregar-a-carrito-de-compras-30.png"
+              alt="carrito"
+            ></img>
+          </Link>
         </li>
         <Dropdown isOpen={drop} toggle={abrirCerrarDrop}>
           <DropdownToggle className="dropBtn">
@@ -95,7 +103,7 @@ const Navbar = () => {
               <DropdownItem onClick={handeLogOut} className="dropItem">
                 CERRAR SESION
               </DropdownItem>
-              <Link to={'/admin'}>
+              <Link to={"/admin"}>
                 <DropdownItem className="dropItem">PANEL ADMIN</DropdownItem>
               </Link>
             </DropdownMenu>
