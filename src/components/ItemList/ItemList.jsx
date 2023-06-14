@@ -3,7 +3,7 @@ import Items from "../Items/Items";
 const ItemList = ({ listaProductos }) => {
   return (
     <main className="Main">
-      {listaProductos.map((producto) => {
+      {listaProductos.slice(0,8).map((producto) => {
         return (
           <Items
             key={producto.productId}

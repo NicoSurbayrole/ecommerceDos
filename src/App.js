@@ -10,6 +10,7 @@ import SingleProduct from "./components/SinglePorduct/SingleProduct";
 import Category from "./components/category/Category";
 import Admin from "./components/Admin/Admin";
 import Carrito from "./components/Carrito/Carrito";
+import Products from "./components/Products/Products";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainItems />} />
         <Route path="/carrito" element={<Carrito/>}/>
-        <Route path="/products" element={<MainItems />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/registro" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin/>}/>
