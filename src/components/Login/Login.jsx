@@ -18,7 +18,7 @@ const Login = () =>{
             Swal.fire({
                 position: "center",
                 icon: "success",
-                title: "usuario logeado correctamente",
+                title: "Sesion Iniciada Correctamente",
                 showConfirmButton: false,
                 timer: 1500,
               })
@@ -27,7 +27,8 @@ const Login = () =>{
             Swal.fire({
                 position: "center",
                 icon: "error",
-                title: "prueba con un usuario valido",
+                title: "El Usuario No Esta registrado",
+                footer:'<Link to={/registro}>Registate</Link>',
                 showConfirmButton: false,
                 timer: 1500,
               })
