@@ -1,3 +1,70 @@
 .carritoDiv{
+    display: grid;
+    grid-template-rows: 1fr;
+}
 
+.carritoImg{
+    margin: 0 auto;
+    width: 200px;
+    height: 150px;
+    border: 3px solid black;
+}
+
+.cartSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    background-color: black;
+    color:  #a87d53;
+}
+
+.cartH2{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.cartP{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.cartDivContainer{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cartBtn,.cartBtnResta{
+    width: 200px;
+    border: 2px solid #a87d53;
+    border-radius: 10px;
+    color: #a87d53;
+    background-color: black;
+    display: block;
+    margin: 25px 0px;
+    padding: 3px;
+}
+
+.cartBtn:hover{
+    background-color: springgreen;
+    color: black;
+    border: black;
+}
+
+.cartBtnResta:hover{
+    background-color: tomato;
+    color: black;
+    border: black;
+}
+
+.cartCantidad{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cartCantidadP{
+    text-align: center;
+    font-size: 18px;
 }
