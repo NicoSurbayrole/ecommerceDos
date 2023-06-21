@@ -1,4 +1,5 @@
 import "./SingleProduct.css";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import { GetProducts } from "../../utils/GetProducts";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -31,10 +32,18 @@ const SingleProduct = () => {
     let findProduct = cart.find((product) => product.id === singleProduct[0].id);
     if (!findProduct) {
       cart.push(singleProduct[0]);
-      console.log("agrgado");
+      Swal.fire({
+        icon: 'success',
+        title: 'El Producto Fue Agregado',
+        text: 'Gracias Por su Compra!',
+      })
       dispatch(setCart([...cart]))
     } else {
-      console.log("ya esta");
+      Swal.fire({
+        icon: 'error',
+        title: 'El Producto Ya fue Agregado',
+        text: 'Agrega mas cantidad desde el carrito!',
+      })
     }
   };
 
